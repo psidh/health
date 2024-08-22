@@ -1,16 +1,17 @@
-import ThemeSwitch from "@/app/ThemeSwitch"
-import Card from "@/components/Card"
+import Card1 from "@/components/Card1"
+import Card2 from "@/components/Card2"
+import Card3 from "@/components/Card3"
 
 export default function page() {
   return (
-    <div className="dark:bg-black dark:text-white bg-white text-black flex flex-col items-center justify-center h-[100vh]">
-      <div className="border border-neutral-700 rounded-full py-3 px-6">
-        Health Matrix
-      </div>
-      <div className="flex items-center justify-center space-x-6">
-        <Card image="/graph.svg" title="Anaytics" color="#ECAA00" />
-        <Card image="/heart.svg" title="Your Data" color="#72C862" />
-        <Card image="/apple.svg" title="Diet Plan" color="#FAFFEE" />
+    <div className="dark:bg-black dark:text-white bg-white text-black flex flex-col items-start justify-start py-16 px-32">
+      <h1 className="my-4 text-4xl font-semibold">Welcome, Philkhana!</h1>
+      <h2 className="my-4 text-neutral-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, corporis, </h2>
+
+      <div className=" flex items-center justify-center space-x-6">
+        <Card1 /> 
+        <Card2 /> 
+        <Card3 /> 
       </div>
     </div>
   )
