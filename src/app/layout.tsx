@@ -1,10 +1,8 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Manrope } from "next/font/google"
 import "./globals.css"
-import "./globalicon.css"
-import Providers from "./Providers"
-
-const inter = Inter({ subsets: ["latin"] })
+import Navbar from "@/components/Navbar"
+const inter = Manrope({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Health Matrix",
@@ -19,10 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`dark:bg-black dark:text-white   ${inter.className} suppressHydrationWarning`}
-      >
-        <Providers>{children}</Providers>
+      <body className={` ${inter.className}`}>
+        <Navbar />
+        {children}
       </body>
     </html>
   )
