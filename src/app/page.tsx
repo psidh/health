@@ -1,5 +1,8 @@
+"use client"
 import Community from "@/components/Community"
 import Review from "@/components/Review"
+import Button from "@mui/material/Button/Button"
+
 export default function Home() {
   return (
     <>
@@ -17,9 +20,9 @@ export default function Home() {
             <span className="mx-2 italic text-violet-600">real-time</span> data
             collection, comprehensive reports, and personalized diet plans.
           </p>
-          <button className="px-6 py-2 bg-purple-600 text-white">
+          <Button variant="contained" size="large" className="bg-purple-600 shadow-none hover:shadow-none py-3 px-6">
             Get Started
-          </button>
+          </Button>
         </div>
         <img src="/doctor.svg" alt="" className="w-[40%]  mb-12 md:mb-0" />
       </div>

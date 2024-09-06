@@ -4,6 +4,7 @@ import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 const inter = Manrope({ subsets: ["latin"] })
+import { AuthProvider } from "@/firebase/AuthContext"
 
 export const metadata: Metadata = {
   title: "Health Matrix",
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${inter.className}`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <AuthProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   )

@@ -1,7 +1,9 @@
+import Button from "@mui/material/Button/Button";
+
 export default function Community() {
   return (
     <div className="px-8 md:px-36 py-16 flex flex-col items-center justify-start">
-      <h2 className="bg-purple-100 rounded-full text-purple-900 py-4 px-12 hover:bg-purple-200 transition duration-300 text-3xl md:text-5xl my-16 font-medium text-center">
+      <h2 className="text-purple-900 text-3xl md:text-5xl my-16 font-medium text-center">
         What Do We Do?
       </h2>
       <div className="flex flex-col md:flex-row justify-between mb-20 w-full items-center space-x-12">
@@ -21,12 +23,12 @@ export default function Community() {
             or simply eat healthier, we've got you covered. Stay on track with
             helpful meal reminders and achieve your health ambitions.
           </p>
-          <button className="bg-purple-100 rounded-full text-purple-900 py-3 px-8 font-medium hover:bg-purple-200 transition duration-300">
+          <Button variant="contained" className="bg-purple-100 text-purple-900 py-3 px-8 font-medium hover:bg-purple-200 hover:shadow-none shadow-none">
             Learn More
-          </button>
+          </Button>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between mb-20 w-full items-center md:space-x-12">
+      <div className="flex flex-col md:flex-row-reverse justify-between mb-20 w-full items-center md:space-x-12">
         <img
           src="/metric.svg"
           alt="Monitor Health Metrics"
@@ -42,9 +44,9 @@ export default function Community() {
             analysis of your health data, empowering you to make informed
             decisions about your well-being.
           </p>
-          <button className="bg-purple-100 rounded-full text-purple-900 py-3 px-8 font-medium hover:bg-purple-200 transition duration-300">
+          <Button variant="contained" className="bg-purple-100 text-purple-900 py-3 px-8 font-medium hover:bg-purple-200 hover:shadow-none shadow-none">
             Learn More
-          </button>
+          </Button>
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between mb-20 w-full items-center md:space-x-12">
@@ -60,9 +62,9 @@ export default function Community() {
             fosters a supportive environment for you to thrive on your health
             journey.
           </p>
-          <button className="bg-purple-100 rounded-full text-purple-900 py-3 px-8 font-medium hover:bg-purple-200 transition duration-300">
+          <Button variant="contained" className="bg-purple-100 text-purple-900 py-3 px-8 font-medium hover:bg-purple-200 hover:shadow-none shadow-none">
             Learn More
-          </button>
+          </Button>
         </div>
       </div>
     </div>
