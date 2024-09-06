@@ -1,12 +1,16 @@
 export default function Community() {
   return (
-    <div className="px-36 py-16 flex flex-col items-center justify-start">
-      <h2 className="bg-purple-100 rounded-full text-purple-900 py-4 px-12 hover:bg-purple-200 transition duration-300 text-5xl my-16 font-medium text-center">
+    <div className="px-8 md:px-36 py-16 flex flex-col items-center justify-start">
+      <h2 className="bg-purple-100 rounded-full text-purple-900 py-4 px-12 hover:bg-purple-200 transition duration-300 text-3xl md:text-5xl my-16 font-medium text-center">
         What Do We Do?
       </h2>
-      <div className="flex justify-between mb-20 w-full items-center space-x-12">
-        <img src="/eat.svg" alt="Discover Diets" className="w-[40%]" />
-        <div className="w-[50%]">
+      <div className="flex flex-col md:flex-row justify-between mb-20 w-full items-center space-x-12">
+        <img
+          src="/eat.svg"
+          alt="Discover Diets"
+          className="w-full my-12 md:w-[40%]"
+        />
+        <div className="w-full md:w-[50%]">
           <h3 className="mb-6 text-2xl font-medium">
             Discover Personalized Diets
           </h3>
@@ -22,13 +26,13 @@ export default function Community() {
           </button>
         </div>
       </div>
-      <div className="flex flex-row-reverse justify-between w-full mb-20 items-center space-x-12">
+      <div className="flex flex-col md:flex-row justify-between mb-20 w-full items-center md:space-x-12">
         <img
           src="/metric.svg"
           alt="Monitor Health Metrics"
-          className="w-[40%]"
+          className="w-full my-12 md:w-[40%]"
         />
-        <div className="w-[50%]">
+        <div className="w-full md:w-[50%]">
           <h3 className="mb-6 text-4xl font-medium">
             Monitor Your Health Metrics
           </h3>
@@ -43,9 +47,9 @@ export default function Community() {
           </button>
         </div>
       </div>
-      <div className="flex justify-between mb-20 w-full items-center space-x-12">
+      <div className="flex flex-col md:flex-row justify-between mb-20 w-full items-center md:space-x-12">
         <img src="/expert.svg" alt="Connect with Experts" className="w-[40%]" />
-        <div className="w-[50%]">
+        <div className="w-full md:w-[50%]">
           <h3 className="mb-6 text-4xl font-medium">
             Connect with Health Experts
           </h3>
