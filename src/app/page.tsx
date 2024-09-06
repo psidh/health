@@ -24,7 +24,7 @@ export default function Home() {
         <img src="/doctor.svg" alt="" className="w-[40%]  mb-12 md:mb-0" />
       </div>
       <Community />
-      <Review />w
+      <Review />
     </>
   )
 }
