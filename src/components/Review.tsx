@@ -1,6 +1,8 @@
 "use client"
 import Button from "@mui/material/Button/Button"
 import Progress from "./Progress"
+import DarkButton from "./DarkButton"
+import LightButton from "./LightButton"
 
 export default function Review() {
   return (
@@ -23,12 +25,7 @@ export default function Review() {
           </p>
           <h3 className="mb-12 text-2xl font-medium">John Doe</h3>
           <Progress />
-          <Button
-            variant="contained"
-            className="bg-purple-100 mt-12 text-purple-900 py-3 px-8 font-medium hover:bg-purple-200 hover:shadow-none shadow-none"
-          >
-            View All
-          </Button>
+          <DarkButton>Read More</DarkButton>
         </div>
       </div>
       <div className="p-8 flex bg-purple-600 text-white flex-col md:flex-row rounded-3xl justify-between items-start space-y-12 md:space-y-0">
@@ -42,12 +39,7 @@ export default function Review() {
             quisquam ea eos repellat sit!
           </p>
         </div>
-        <Button
-          variant="contained"
-          className="bg-purple-100 text-purple-900 py-3 px-8 font-medium hover:bg-purple-200 hover:shadow-none shadow-none"
-        >
-          Receive Your Quote
-        </Button>
+        <LightButton>Receive Your Quote</LightButton>
       </div>
     </div>
   )
