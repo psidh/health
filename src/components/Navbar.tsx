@@ -10,8 +10,13 @@ import Button from "@mui/material/Button"
 import IconButton from "@mui/material/IconButton"
 import MenuIcon from "@mui/icons-material/Menu"
 import theme from "@/utils/colorPallete"
+import { useAuth } from "@/firebase/AuthContext"
+import { useRouter } from "next/navigation"
 
 export default function ButtonAppBar() {
+  const { signInWithGoogle, logout, user } = useAuth()
+  const router = useRouter();
+
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ flexGrow: 1 }}>
@@ -27,9 +32,24 @@ export default function ButtonAppBar() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              News
+              Health Matrix
             </Typography>
-            <Button color="inherit">Login</Button>
+            {user ? (
+              <div className="flex space-x-2">
+                <Button onClick={function(){
+                  router.push("/dashboard")
+                }} variant="text" color="inherit">
+                  Dashboard
+                </Button>
+                <Button onClick={logout} variant="text" color="inherit">
+                  Logout
+                </Button>
+              </div>
+            ) : (
+              <Button onClick={signInWithGoogle} variant="text" color="inherit">
+                Login
+              </Button>
+            )}
           </Toolbar>
         </AppBar>
       </Box>
