@@ -15,7 +15,7 @@ export const requireAuth = (Component) => {
     }, [user, loading, router])
 
     if (loading) {
-      return <div>Loading...</div>
+      return <div className="flex flex-col items-center justify-center h-[100vh]"><img src="/loading.gif" alt="" className="w-1/2 h-1/2" /></div>
     }
 
     if (!user) {

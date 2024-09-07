@@ -7,7 +7,7 @@ export default function Community() {
   return (
     <>
       <div className="px-8 md:px-36 py-16 flex flex-col items-center justify-start">
-        <h2 className="text-purple-900 text-3xl md:text-5xl my-16 font-medium text-center">
+        <h2 className="text-[var(--main)] text-3xl md:text-5xl my-16 font-medium text-center">
           What Do We Do?
         </h2>
         <div className="flex flex-col md:flex-row justify-between mb-20 w-full items-center space-x-12">

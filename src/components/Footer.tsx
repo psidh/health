@@ -17,7 +17,7 @@ export default function Footer() {
             placeholder="Enter a Email Address"
             className="py-4 px-6 bg-neutral-600 rounded-xl"
           />
-          <button className="px-6 py-4 bg-purple-600 text-white rounded-xl">
+          <button className="px-6 py-4 bg-[var(--tertiary)] text-white rounded-xl">
             Submit
           </button>
         </div>

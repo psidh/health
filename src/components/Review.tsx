@@ -7,7 +7,7 @@ import LightButton from "./LightButton"
 export default function Review() {
   return (
     <div className="px-8 md:px-12 py-16 flex flex-col items-center justify-start">
-      <h2 className="text-purple-900 text-3xl md:text-5xl my-16 font-medium text-center">
+      <h2 className="text-[var(--main)] text-3xl md:text-5xl my-16 font-medium text-center">
         Testimonials
       </h2>
       <div className="flex flex-col md:flex-row justify-between mb-20 w-full items-center md:space-x-12">
@@ -28,7 +28,7 @@ export default function Review() {
           <DarkButton>Read More</DarkButton>
         </div>
       </div>
-      <div className="p-8 flex bg-purple-600 text-white flex-col md:flex-row rounded-3xl justify-between items-start space-y-12 md:space-y-0">
+      <div className="p-8 flex bg-[var(--tertiary)] text-white flex-col md:flex-row rounded-3xl justify-between items-start space-y-12 md:space-y-0">
         <div className="w-full md:w-[60%]">
           <h3 className="font-semibold text-3xl mb-6">
             Master your wellness, Live Fully

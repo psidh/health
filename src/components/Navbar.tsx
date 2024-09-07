@@ -15,7 +15,7 @@ import { useRouter } from "next/navigation"
 
 export default function ButtonAppBar() {
   const { signInWithGoogle, logout, user } = useAuth()
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <ThemeProvider theme={theme}>
@@ -31,14 +31,26 @@ export default function ButtonAppBar() {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1 }}
+              onClick={function () {
+                router.push("/")
+              }}
+              className="cursor-pointer"
+            >
               Health Matrix
             </Typography>
             {user ? (
               <div className="flex space-x-2">
-                <Button onClick={function(){
-                  router.push("/dashboard")
-                }} variant="text" color="inherit">
+                <Button
+                  onClick={function () {
+                    router.push("/dashboard")
+                  }}
+                  variant="text"
+                  color="inherit"
+                >
                   Dashboard
                 </Button>
                 <Button onClick={logout} variant="text" color="inherit">
