@@ -11,3 +11,21 @@
 .card {
   box-shadow: #9333ea 0px 0px 12px;
 }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+.material-symbols-outlined .filled {
+  font-variation-settings:
+  'FILL' 100,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
