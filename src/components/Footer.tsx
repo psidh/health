@@ -1,5 +1,4 @@
 import React from "react"
-
 export default function Footer() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between px-8 md:px-36 bg-neutral-900 text-neutral-400 p-8 space-x-0 md:space-x-12">
