@@ -41,7 +41,7 @@ export default function Schedule() {
           </h2>
           <p className="text-purple-700">General Practitioner</p>
           <p className="text-purple-600">Available: 1:00 PM - 5:00 PM</p>
-          <p className="text-purple-600">Location: Green Clinic</p>
+          <p className="text-purple-600">Location: purple Clinic</p>
         </div>
       </div>
 

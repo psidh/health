@@ -12,6 +12,9 @@ import MenuIcon from "@mui/icons-material/Menu"
 import theme from "@/utils/colorPallete"
 import { useAuth } from "@/firebase/AuthContext"
 import { useRouter } from "next/navigation"
+import { Plus_Jakarta_Sans } from "next/font/google"
+
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] })
 
 export default function ButtonAppBar() {
   const { signInWithGoogle, logout, user } = useAuth()
@@ -20,7 +23,7 @@ export default function ButtonAppBar() {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" color="transparent">
           <Toolbar>
             <IconButton
               size="large"
@@ -38,7 +41,7 @@ export default function ButtonAppBar() {
               onClick={function () {
                 router.push("/")
               }}
-              className="cursor-pointer"
+              className={`cursor-pointer ${plusJakartaSans.className}`}
             >
               Health Matrix
             </Typography>
@@ -50,15 +53,26 @@ export default function ButtonAppBar() {
                   }}
                   variant="text"
                   color="inherit"
+                  className={plusJakartaSans.className}
                 >
                   Dashboard
                 </Button>
-                <Button onClick={logout} variant="text" color="inherit">
+                <Button
+                  onClick={logout}
+                  variant="text"
+                  color="inherit"
+                  className={plusJakartaSans.className}
+                >
                   Logout
                 </Button>
               </div>
             ) : (
-              <Button onClick={signInWithGoogle} variant="text" color="inherit">
+              <Button
+                onClick={signInWithGoogle}
+                variant="text"
+                color="inherit"
+                className={plusJakartaSans.className}
+              >
                 Login
               </Button>
             )}
