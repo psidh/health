@@ -21,64 +21,66 @@ export default function ButtonAppBar() {
   const router = useRouter()
 
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" color="transparent">
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              aria-label="menu"
-              color="inherit"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1 }}
-              onClick={function () {
-                router.push("/")
-              }}
-              className={`cursor-pointer ${plusJakartaSans.className}`}
-            >
-              Health Matrix
-            </Typography>
-            {user ? (
-              <div className="flex space-x-2">
-                <Button
-                  onClick={function () {
-                    router.push("/dashboard")
-                  }}
-                  variant="text"
-                  color="inherit"
-                  className={plusJakartaSans.className}
-                >
-                  Dashboard
-                </Button>
-                <Button
-                  onClick={logout}
-                  variant="text"
-                  color="inherit"
-                  className={plusJakartaSans.className}
-                >
-                  Logout
-                </Button>
-              </div>
-            ) : (
-              <Button
-                onClick={signInWithGoogle}
-                variant="text"
+    <div className="fixed w-full bg-white z-auto">
+      <ThemeProvider theme={theme}>
+        <Box sx={{ flexGrow: 1 }}>
+          <AppBar position="static" color="transparent">
+            <Toolbar>
+              <IconButton
+                size="large"
+                edge="start"
+                aria-label="menu"
                 color="inherit"
-                className={plusJakartaSans.className}
+                sx={{ mr: 2 }}
               >
-                Login
-              </Button>
-            )}
-          </Toolbar>
-        </AppBar>
-      </Box>
-    </ThemeProvider>
+                <MenuIcon />
+              </IconButton>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1 }}
+                onClick={function () {
+                  router.push("/")
+                }}
+                className={`cursor-pointer ${plusJakartaSans.className}`}
+              >
+                Health Matrix
+              </Typography>
+              {user ? (
+                <div className="flex space-x-2">
+                  <Button
+                    onClick={function () {
+                      router.push("/dashboard")
+                    }}
+                    variant="text"
+                    color="inherit"
+                    className={plusJakartaSans.className}
+                  >
+                    Dashboard
+                  </Button>
+                  <Button
+                    onClick={logout}
+                    variant="text"
+                    color="inherit"
+                    className={plusJakartaSans.className}
+                  >
+                    Logout
+                  </Button>
+                </div>
+              ) : (
+                <Button
+                  onClick={signInWithGoogle}
+                  variant="text"
+                  color="inherit"
+                  className={plusJakartaSans.className}
+                >
+                  Login
+                </Button>
+              )}
+            </Toolbar>
+          </AppBar>
+        </Box>
+      </ThemeProvider>
+    </div>
   )
 }

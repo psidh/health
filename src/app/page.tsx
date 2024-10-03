@@ -22,7 +22,8 @@ export default function Home() {
             </span>{" "}
             data collection, comprehensive reports, and personalized diet plans.
           </p>
-          <DarkButton>Get Started</DarkButton>
+          <a href=""><DarkButton>Get Started</DarkButton>
+          </a>
         </div>
         <img src="/doctor.svg" alt="" className="w-[40%]  mb-12 md:mb-0" />
       </div>
