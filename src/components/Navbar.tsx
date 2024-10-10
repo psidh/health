@@ -21,7 +21,7 @@ export default function ButtonAppBar() {
   const router = useRouter()
 
   return (
-    <div className="fixed w-full bg-white z-auto">
+    <div className="fixed w-full bg-white z-50">
       <ThemeProvider theme={theme}>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static" color="transparent">
